@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Lesson3._3
 {
-
     /// <summary>
     /// Создайте класс DocumentWorker.
     /// В теле класса создайте три метода OpenDocument(), EditDocument(), SaveDocument().
@@ -19,41 +20,15 @@ namespace Lesson3._3
     /// то должен создаться экземпляр соответствующей версии класса, приведенный к базовому - DocumentWorker. 
     /// </summary>
 
-    class Program
+    public class ProDocumentWorker : DocumentWorker
     {
-        static void Main(string[] args)
+       public override void EditDocument()
         {
-            Console.WriteLine("Please, write a key product: (1-trial, 2-pro, 3-expert ");
-            int keyFromUser = Convert.ToInt32(Console.ReadLine());
-            switch (keyFromUser)
-            {
-                case 1:
-                    {
-                        DocumentWorker document = new DocumentWorker();
-                        document.OpenDocument();
-                        document.EditDocument();
-                        document.SaveDocument();
-                        break;
-                    }
-                case 2:
-                    {
-                        ProDocumentWorker document = new ProDocumentWorker();
-                        document.OpenDocument();
-                        document.EditDocument();
-                        document.SaveDocument();
-                        break;
-                    }
-                case 3:
-                    {
-                        ExpertDocumentWorker document = new ExpertDocumentWorker();
-                        document.OpenDocument();
-                        document.EditDocument();
-                        document.SaveDocument();
-                        break;
-                    }
-                default:
-                    break;
-            }
+            Console.WriteLine("Документ отредактирован");
+        }
+        public override void SaveDocument()
+        {
+            Console.WriteLine("Документ сохранен в старом формате, сохранение в остальных форматах доступно в версии эксперт");
         }
     }
 }
