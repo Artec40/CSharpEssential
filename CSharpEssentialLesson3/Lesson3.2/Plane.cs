@@ -16,13 +16,13 @@ namespace Lesson3._2
 
     public class Plane : Vehicle
     {
-        private int height;
-        private int capacity;
+        private int _height;
+        private int _capacity;
         public Plane(int coordX, int coordY, int price, int speed, int yearIssue, int height, int capacity)
             : base(coordX,coordY,price,speed,yearIssue)
         {
-            this.height = height;
-            this.capacity = capacity;
+            this._height = height;
+            this._capacity = capacity;
         }
         public void showPlane()
         {

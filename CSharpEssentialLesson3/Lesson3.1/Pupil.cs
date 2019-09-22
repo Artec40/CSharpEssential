@@ -33,6 +33,12 @@ namespace Lesson3._1
         {
             Console.WriteLine("Relax");
         }
+        public void ShowAction()
+        {
+            Study();
+            Read();
+            Write();
+            Relax();
+        }
     }
-
 }

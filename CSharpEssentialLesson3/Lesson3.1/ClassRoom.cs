@@ -15,6 +15,20 @@ namespace Lesson3._1
 
     class ClassRoom
     {
-
+        public string FirstPupil
+        { get; set; }
+        public string SecondPupil
+        { get; set; }
+        public string ThirdPupil
+        { get; set; }
+        public string FourthPupil
+        { get; set; }
+        public ClassRoom(string firstPupil, string secondPupil, string thirdPupil, string fourthPupil)
+        {
+            this.FirstPupil = firstPupil;
+            this.SecondPupil = secondPupil;
+            this.ThirdPupil = thirdPupil;
+            this.FourthPupil = fourthPupil;
+        }
     }
 }

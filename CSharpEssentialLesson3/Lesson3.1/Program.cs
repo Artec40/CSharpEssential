@@ -15,45 +15,82 @@ namespace Lesson3._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("number of pupil in da class? - ");
-            // pupilInClassroom - количество учеников в классе. pupilCounter - счетчик учеников в цикле.
-            int pupilInClassroom = Convert.ToInt32(Console.ReadLine());
-            int pupilCounter = 0;
-            while (pupilCounter < pupilInClassroom)
+            ClassRoom classRoom = new ClassRoom("ExcelentPupil", "GoodPupil", "BadPupil", "BadPupil");
+            Console.WriteLine("Classroom contain {0}, {1}, {2}, {3}", classRoom.FirstPupil, classRoom.SecondPupil, classRoom.ThirdPupil, classRoom.FourthPupil);
+            switch (classRoom.FirstPupil)
             {
-                Console.WriteLine("1 - ExcelentPupil, 2 - GoodPupil, 3 - BadPupil");
-                string userInput = Console.ReadLine();
+                case "ExcelentPupil":
+                    ExcelentPupil excelentPupil = new ExcelentPupil();
+                    excelentPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "GoodPupil":
+                    GoodPupil goodPupil = new GoodPupil();
+                    goodPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "BadPupil":
+                    BadPupil badPupil = new BadPupil();
+                    badPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+            }
 
-                switch (userInput)
-                {
-                    case "1":
-                        ExcelentPupil excelentPupil = new ExcelentPupil();
-                        excelentPupil.Study();
-                        excelentPupil.Read();
-                        excelentPupil.Write();
-                        excelentPupil.Relax();
-                        pupilCounter++;
-                        continue;
-                    case "2":
-                        GoodPupil goodPupil = new GoodPupil();
-                        goodPupil.Study();
-                        goodPupil.Read();
-                        goodPupil.Write();
-                        goodPupil.Relax();
-                        pupilCounter++;
-                        continue;
-                    case "3":
-                        BadPupil badPupil = new BadPupil();
-                        badPupil.Study();
-                        badPupil.Read();
-                        badPupil.Write();
-                        badPupil.Relax();
-                        pupilCounter++;
-                        continue;
-                    default:
-                        continue;
-                }
+            switch (classRoom.SecondPupil)
+            {
+                case "ExcelentPupil":
+                    ExcelentPupil excelentPupil = new ExcelentPupil();
+                    excelentPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "GoodPupil":
+                    GoodPupil goodPupil = new GoodPupil();
+                    goodPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "BadPupil":
+                    BadPupil badPupil = new BadPupil();
+                    badPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+            }
 
+            switch (classRoom.ThirdPupil)
+            {
+                case "ExcelentPupil":
+                    ExcelentPupil excelentPupil = new ExcelentPupil();
+                    excelentPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "GoodPupil":
+                    GoodPupil goodPupil = new GoodPupil();
+                    goodPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "BadPupil":
+                    BadPupil badPupil = new BadPupil();
+                    badPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+            }
+
+            switch (classRoom.FourthPupil)
+            {
+                case "ExcelentPupil":
+                    ExcelentPupil excelentPupil = new ExcelentPupil();
+                    excelentPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "GoodPupil":
+                    GoodPupil goodPupil = new GoodPupil();
+                    goodPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
+                case "BadPupil":
+                    BadPupil badPupil = new BadPupil();
+                    badPupil.ShowAction();
+                    Console.WriteLine(new string('-', 50));
+                    break;
             }
         }
     }

@@ -17,7 +17,7 @@ namespace Lesson3._1
     {
         public override void Study()
         {
-            Console.WriteLine("Study");
+            Console.WriteLine("ExcelentStudy");
         }
         public override void Read()
         {

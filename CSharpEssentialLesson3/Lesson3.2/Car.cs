@@ -19,7 +19,7 @@ namespace Lesson3._2
         public Car(int coordX, int coordY, int price, int speed, int yearIssue)
     : base(coordX, coordY, price, speed, yearIssue)
         { }
-        public void showCar()
+        public void ShowCar()
         {
             Console.WriteLine("Car: coord({0},{1}), price {2}, speed {3}, yearIssue {4}", coordX, coordY, price, speed, yearIssue);
         }
