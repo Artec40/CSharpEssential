@@ -19,7 +19,7 @@ namespace Lesson10._1
             userValue = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(list[userValue]);
 
-            Console.WriteLine("Размер массива {0}", list.arrayLength);
+            Console.WriteLine("Размер массива {0}", list.listLength);
         }
     }
 }
