@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lesson10._1
+namespace Lesson11._1
 {
     public interface IMyList<T>
     {
         void Add(T a);
         T this[int index] { get; }
-        int listLength { get; }
+        int ListLength { get; }
     }
 
     public class MyList<T> : IMyList<T>
@@ -36,10 +36,14 @@ namespace Lesson10._1
             get { return _currentList[index]; }
         }
 
-        public int listLength
+        public int ListLength
         {
             get { return _currentList.Length; }
         }
 
+        public void Clear()
+        {
+            _currentList = new T[0];
+        }
     }
 }
