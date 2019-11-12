@@ -4,30 +4,39 @@ using System.Text;
 
 namespace Lesson11._1
 {
-    class CarCollection<T> : MyList<T>
+    public interface ICar
     {
-        private readonly MyList<string> _carName;
-        private readonly MyList<int> _carYear;
+        string Name { get; }
+        int Year { get; }
+
+
+    }
+    class CarCollection<T> : MyList<T> where T : ICar
+    {
+        private readonly MyList<T> _cars;
+        // private readonly MyList<string> _carName;
+        // private readonly MyList<int> _carYear;
 
         public CarCollection()
         {
-            _carName = new MyList<string>();
-            _carYear = new MyList<int>();
+            _cars = new MyList<T>();
+            //_carYear = new MyList<int>();
         }
 
-        public void AddCar(string newCarName, int newCarYear)
+        public void AddCar(T newCar)
         {
-            _carName.Add(newCarName);
-            _carYear.Add(newCarYear);
+            _cars.Add(newCar);
+            // _carName.Add(newCar.Name);
+            // _carYear.Add(newCar.Year);
         }
 
-        public new string this[int index]
+        public new T this[int index]
         {
             get
             {
-                if (index <= _carName.ListLength)
-                    return _carName[index] + " " + _carYear[index];
-                return "wrong command";
+                if (index <= _cars.ListLength)
+                    return _cars[index];
+                throw new Exception("Car not found.");
             }
         }
 
@@ -35,14 +44,13 @@ namespace Lesson11._1
         {
             get
             {
-                return _carName.ListLength;
+                return _cars.ListLength;
             }
         }
 
         public void Delete()
         {
-            _carName.Clear();
-            _carYear.Clear();
+            _cars.Clear();
         }
     }
 }
