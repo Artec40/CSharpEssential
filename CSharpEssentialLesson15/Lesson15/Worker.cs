@@ -41,11 +41,6 @@ namespace Lesson15
             this.year = year;
         }
 
-        public void FindWorkExperienceMoreThan(int experience)
-        {
-            if (Year >= experience)
-                Console.WriteLine($"Worker: name {Name}, position {Position}, year {Year}");
-        }
     }
 }
 

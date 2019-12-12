@@ -43,7 +43,8 @@ namespace Lesson15
             int userValue = Convert.ToInt32(Console.ReadLine());
             for (int j = 0; j < company.Length; j++)
             {
-                company[j].FindWorkExperienceMoreThan(userValue);
+                if (company[j].Year <= userValue)
+                    Console.WriteLine($"Worker: name {company[j].Name}, position {company[j].Position}, year {company[j].Year}");
             }
         }
     }
