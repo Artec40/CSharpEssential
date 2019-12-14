@@ -4,18 +4,11 @@ using System.Text;
 
 namespace Lesson17
 {
-    class CarCollection
+    class CarCollection : List<Car>
     {
-        public string Mark { get; set; }
-        public string Model { get; set; }
-        public int Year { get; set; }
-        public string Color { get; set; }
-        public CarCollection(string mark, string model, int year, string color)
+        public void Add(string mark, string model, int year, string color)
         {
-            this.Mark = mark;
-            this.Model = model;
-            this.Year = year;
-            this.Color = color;
+            base.Add(new Car(mark, model, year, color));
         }
     }
 }

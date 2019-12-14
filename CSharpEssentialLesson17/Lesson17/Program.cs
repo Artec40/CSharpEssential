@@ -8,18 +8,18 @@ namespace Lesson17
     {
         static void Main(string[] args)
         {
-            var carCollection = new List<CarCollection>();
-            carCollection.Add(new CarCollection("Bentley", "Mulsanne", 2018, "Black"));
-            carCollection.Add(new CarCollection("Shevrolet", "Camaro", 2010, "Yellow"));
-            carCollection.Add(new CarCollection("Zaporojec", "ZAZ-965", 1965, "Red"));
+            var carCollection = new CarCollection();
+            carCollection.Add("Bentley", "Mulsanne", 2018, "Black");
+            carCollection.Add("Shevrolet", "Camaro", 2010, "Yellow");
+            carCollection.Add("Zaporojec", "ZAZ-965", 1965, "Red");
 
-            List<ClientCollection> clientCollection = new List<ClientCollection>();
-            clientCollection.Add(new ClientCollection("Bentley", "BentleyHandler", 88005553535));
-            clientCollection.Add(new ClientCollection("Shevrolet", "CamaroHandler", 3101010));
-            clientCollection.Add(new ClientCollection("Zaporojec", "WhoAreYou", 1111111111));
+            var clientCollection = new ClientCollection();
+            clientCollection.Add("Bentley", "BentleyHandler", 88005553535);
+            clientCollection.Add("Shevrolet", "CamaroHandler", 3101010);
+            clientCollection.Add("Zaporojec", "WhoAreYou", 1111111111);
 
             Console.WriteLine("CarCollection include: ");
-            foreach (CarCollection car in carCollection)
+            foreach (Car car in carCollection)
             {
                 Console.Write($"{car.Mark}, ");
             }
