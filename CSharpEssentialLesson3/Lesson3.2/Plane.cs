@@ -24,9 +24,9 @@ namespace Lesson3._2
             this._height = height;
             this._capacity = capacity;
         }
-        public void showPlane()
+        public void ShowPlane()
         {
-            Console.WriteLine("Plane: coord({0},{1}), price {2}, speed {3}, yearIssue {4}, height {5}, capacity {6}", coordX, coordY, price, speed, yearIssue, height, capacity);
+            Console.WriteLine("Plane: coord({0},{1}), price {2}, speed {3}, yearIssue {4}, height {5}, capacity {6}", coordX, coordY, price, speed, yearIssue, _height, _capacity);
         }
     }
 }

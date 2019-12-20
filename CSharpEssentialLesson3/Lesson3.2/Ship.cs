@@ -24,7 +24,7 @@ namespace Lesson3._2
             this.capacity = capacity;
             this.portID = portID;
         }
-        public void showShip()
+        public void ShowShip()
         {
             Console.WriteLine("Ship: coord({0},{1}), price {2}, speed {3}, yearIssue {4}, capacity {5}, portID {6}", coordX, coordY, price, speed, yearIssue, capacity, portID);
         }
