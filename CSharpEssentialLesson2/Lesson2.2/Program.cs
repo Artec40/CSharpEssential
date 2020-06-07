@@ -14,18 +14,24 @@ namespace Lesson2._2
 {
     class Program
     {
-        // Спрашиваем имя фамилию.
-        // Выдаем свойство оклад.
-        // Выдаем свойство налоговый сбор.
         static void Main(string[] args)
         {
-            string EmployeeName = Console.ReadLine();
-            string EmployeeSurname = Console.ReadLine();
+            Employee ivan = new Employee("Ivan", "Ivanov");
+            ivan.Position = "Junior";
+            ivan.Experience = 1;
 
-            Employee employee = new Employee(EmployeeName, EmployeeSurname);
-            Employee.ShowEmployeesName();
+            Employee petr = new Employee("Petr", "Petrov");
+            petr.Position = "Middle";
+            petr.Experience = 3;
+
+            Employee vasya = new Employee("Vasya", "Vasil'ev");
+            vasya.Position = "Senior";
+            vasya.Experience = 10;
+
+            Console.WriteLine($"{ivan.Name} {ivan.Surname} salary - {Employee.SalaryCalculation(ivan)}");
+            Console.WriteLine($"{petr.Name} {petr.Surname} salary - {Employee.SalaryCalculation(petr)}");
+            Console.WriteLine($"{ivan.Name} {vasya.Surname} salary - {Employee.SalaryCalculation(vasya)}");
         }
-
     }
 }
 

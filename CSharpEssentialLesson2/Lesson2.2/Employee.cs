@@ -14,25 +14,44 @@ namespace Lesson2._2
 {
     public class Employee
     {
-        // Создаем поля фамилия и имя.
-        private string name, surname;
-        // Создаем список сотрудников (фамилия, имя, должность, стаж).
-        private List<string> employessName = new List<string>() { "Ivan, Petr, Genadiy" };
-        private List<string> employessSurname = new List<string>() { "Ivanov, Petrov, Petrov" };
-        private List<string> employessPosition = new List<string>() { "Junior, Middle, Senior" };
-        // employessExperience измеряется в годах.
-        private List<int> employessExperience = new List<int>() { 1, 2, 5};
-
-        public void ShowEmployessName()
-        {
-            Console.WriteLine(employessName);
-        }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int Experience { get; set; }
+        public string Position { get; set; }
         public Employee(string name, string surname)
         {
-            this.name = name;
-            this.surname = surname;
+            this.Name = name;
+            this.Surname = surname;
         }
-        // Создаем свойство - оклад и свойство - налоговый сбор, с методами-мутаторами, работающими на выдачу.
-        // Создаем пользовательский конструктор, в котором инициализируем фамилию, имя.
+
+        public static double SalaryCalculation(Employee employee)
+        {
+            double salary = 0;
+            switch (employee.Position)
+            {
+                case "Junior":
+                    salary = 50000;
+                    break;
+                case "Middle":
+                    salary = 75000;
+                    break;
+                case "Senior":
+                    salary = 100000;
+                    break;
+            }
+
+            double addForExperience = 1;
+            if (employee.Experience <= 1)
+                addForExperience = 1;
+
+            else if (employee.Experience > 1 && employee.Experience < 5)
+                addForExperience = addForExperience * 1.2;
+
+            else
+                addForExperience = addForExperience * 1.4;
+
+            salary = salary * addForExperience;
+            return salary;
+        }
     }
 }

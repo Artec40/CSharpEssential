@@ -6,7 +6,11 @@ namespace Lesson2._3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Invoice invoice = new Invoice(1, "Andrew", "Ebay");
+            invoice.Article = "pen";
+            invoice.Quantity = 6;
+
+            Console.WriteLine($"cost with nds: {invoice.CostCalculate(true)}, without nds {invoice.CostCalculate(false)} ");
         }
     }
 }
